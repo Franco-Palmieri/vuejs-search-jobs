@@ -21,7 +21,7 @@
             <div>{{job.city}}</div>
             <div>{{job.contract}}</div>
             <div class="icons-container">
-                <div> <i :class="getStarredClass(jobIndex)"></i></div>
+                <div class="add-favorite" @click="addStarred(index)"><i :class="getStarredClass(index)"></i></div>
             </div>
         </div>
     </div>

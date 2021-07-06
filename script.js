@@ -71,6 +71,11 @@ const app = new Vue(
                     return "far fa-star"
                 }
             },
+            //Funzione per aggiungere l'index
+            //nell'array dei preferiti
+            addStarred: function (jobIndex){
+                this.starred.push(jobIndex);
+            }
         },
     }
 );
