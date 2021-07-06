@@ -8,8 +8,10 @@
     width: 1200px;
 }
 .page-job{
-    border: 1px solid black;
+    border-bottom: lightblue 3px solid;
+    padding: 15px 0;
     margin: 10px;
+    text-align: center;
 }
 .icons-container{
     display: flex;
@@ -17,15 +19,18 @@
     align-items: center;
 }
 .icons-container button{
+    width: 100px;
     padding: 5px;
     background-color: lightblue;
     color: white;
     border: none;
-    box-shadow: 0 0 5px lightblue;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(30, 170, 216);
 }
 .icons-container .fas{
    color: rgb(235, 235, 31);
 }
 .icons-container .selected{
     background-color: gray;
+    box-shadow: 0 0 5px black;
 }

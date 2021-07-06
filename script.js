@@ -86,6 +86,7 @@ const app = new Vue(
             //Funzione per candidarsi
             addApplied: function (jobIndex){
                 this.applied.push(jobIndex);
+                alert("ti sei candidato correttamente")
                 if (this.starred.includes(jobIndex)){
                     this.starred.splice(jobIndex, 1)
                 }
