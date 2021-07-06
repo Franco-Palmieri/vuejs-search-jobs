@@ -59,37 +59,35 @@ const app = new Vue(
             jobIndex: 0,
         },
         methods: {
-            //funzione per collegare index a jobIndex
-            selectIndex: function (index){
-                this.jobIndex = index;
-            },
             //Funzione per selezionare i preferiti
-            getStarredClass: function (jobIndex){
-                if (this.starred.includes(jobIndex)){
+            getStarredClass: function (jobid){
+                if (this.starred.includes(jobid)){
                     return "fas fa-star"
                 }else{
                     return "far fa-star"
                 }
             },
-            //Funzione per aggiungere l'index
+            //Funzione per aggiungere l'id
             //nell'array dei preferiti
-            addStarred: function (jobIndex){
-                this.starred.push(jobIndex);
+            addStarred: function (jobid){
+                this.starred.push(jobid);
             },
             //Funzione per candidarsi ritornando un'altra classe
             //quando sia selezionato e modificare il colore
-            getAppliedClass: function(jobIndex){
-                if(this.applied.includes(jobIndex)){
+            getAppliedClass: function(jobid){
+                if(this.applied.includes(jobid)){
                     return "selected"
                 }
             },
             //Funzione per candidarsi
-            addApplied: function (jobIndex){
-                this.applied.push(jobIndex);
+            addApplied: function (jobid){
+                this.applied.push(jobid);
                 alert("ti sei candidato correttamente")
-                if (this.starred.includes(jobIndex)){
-                    this.starred.splice(jobIndex, 1)
-                }
+                starred = starred.filter((e) =>{
+                    if(e === jobid){
+                        return "false";
+                    }
+                })
             }
         },
     }

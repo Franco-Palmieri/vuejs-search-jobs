@@ -12,7 +12,7 @@
 <body>
 
     <div id="app" class="container">
-        <div v-for="(job, index) in jobs" class="page-job">
+        <div v-for="job in jobs" class="page-job">
             <div><h2>{{job.company}}</h2></div>
             <div><h4>{{job.position}}</h4></div>
             <div>{{job.description}}</div>
@@ -21,9 +21,9 @@
             <div>{{job.city}}</div>
             <div>{{job.contract}}</div>
             <div class="icons-container">
-                <div class="add-favorite" @click="addStarred(index)"><i :class="getStarredClass(index)"></i></div>
+                <div class="add-favorite" @click="addStarred(job.id)"><i :class="getStarredClass(job.id)"></i></div>
                 <div>
-                    <button :class="getAppliedClass(index)" @click="addApplied(index)">Apply</button>
+                    <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)">Apply</button>
                 </div>
             </div>
         </div>
