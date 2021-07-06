@@ -27,6 +27,10 @@
     border-radius: 5px;
     box-shadow: 0 0 5px rgb(30, 170, 216);
 }
+.icons-container i {
+    font-size: 25px;
+    color: yellow;
+}
 .icons-container .fas{
    color: rgb(235, 235, 31);
 }

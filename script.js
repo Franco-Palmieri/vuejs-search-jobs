@@ -56,7 +56,6 @@ const app = new Vue(
             ],
             starred: [1, 2, 3],
             applied: [4, 5],
-            jobIndex: 0,
         },
         methods: {
             //Funzione per selezionare i preferiti
@@ -93,8 +92,6 @@ const app = new Vue(
                     alert("ti sei candidato correttamente");
                     this.starred = this.starred.filter(e => e !== jobid);
                 }
-                
-                
             },
         },
     }

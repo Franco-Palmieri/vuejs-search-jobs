@@ -12,23 +12,25 @@
 <body>
 
     <div id="app" class="container">
-        <div v-for="job in jobs" class="page-job">
-            <div><h2>{{job.company}}</h2></div>
-            <div><h4>{{job.position}}</h4></div>
-            <div>{{job.description}}</div>
-            <div>{{job.created_at}}</div>
-            <div>{{job.logo}}</div>
-            <div>{{job.city}}</div>
-            <div>{{job.contract}}</div>
-            <div class="icons-container">
-                <div 
-                    class="add-favorite" 
-                    @click="addStarred(job.id)">
-                    <i :class="getStarredClass(job.id)"></i>
-                </div>
-                <div>
-                    <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)" v-if="applied.includes(job.id)">Applied</button>
-                    <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)" v-else>Apply</button>
+        <div class="container-pages">
+            <div v-for="job in jobs" class="page-job">
+                <div><h2>{{job.company}}</h2></div>
+                <div><h4>{{job.position}}</h4></div>
+                <div>{{job.description}}</div>
+                <div>{{job.created_at}}</div>
+                <div>{{job.logo}}</div>
+                <div>{{job.city}}</div>
+                <div>{{job.contract}}</div>
+                <div class="icons-container">
+                    <div 
+                        class="add-favorite" 
+                        @click="addStarred(job.id)">
+                        <i :class="getStarredClass(job.id)"></i>
+                    </div>
+                    <div>
+                        <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)" v-if="applied.includes(job.id)">Applied</button>
+                        <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)" v-else>Apply</button>
+                    </div>
                 </div>
             </div>
         </div>
