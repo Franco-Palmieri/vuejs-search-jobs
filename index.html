@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.cs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+
     <div id="app" class="container">
-        <div v-for="job in jobs" class="page-job">
+        <div v-for="(job, index) in jobs" class="page-job">
             <div>{{job.company}}</div>
             <div>{{job.position}}</div>
             <div>{{job.description}}</div>
@@ -19,8 +20,10 @@
             <div>{{job.logo}}</div>
             <div>{{job.city}}</div>
             <div>{{job.contract}}</div>
+            <div class="icons-container">
+                <div> <i :class="getStarredClass"></i></div>
+            </div>
         </div>
-
     </div>
     
     <script src="script.js"></script>

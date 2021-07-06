@@ -55,9 +55,22 @@ const app = new Vue(
                 }, 
             ],
             starred: [1, 2, 3],
-            applied: [4, 5]
+            applied: [4, 5],
+            jobIndex: 0,
         },
         methods: {
+            //funzione per collegare index a jobIndex
+            selectIndex: function (index){
+                this.jobIndex = index;
+            },
+            //Funzione per selezionare i preferiti
+            getStarredClass: function (index){
+                if (this.starred.includes(jobIndex)){
+                    return "fas fa-star"
+                }else{
+                    return "far fa-star"
+                }
+            }
         },
     }
 );
