@@ -64,13 +64,13 @@ const app = new Vue(
                 this.jobIndex = index;
             },
             //Funzione per selezionare i preferiti
-            getStarredClass: function (index){
+            getStarredClass: function (jobIndex){
                 if (this.starred.includes(jobIndex)){
                     return "fas fa-star"
                 }else{
                     return "far fa-star"
                 }
-            }
+            },
         },
     }
 );
