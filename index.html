@@ -22,6 +22,9 @@
             <div>{{job.contract}}</div>
             <div class="icons-container">
                 <div class="add-favorite" @click="addStarred(index)"><i :class="getStarredClass(index)"></i></div>
+                <div>
+                    <button :class="getAppliedClass(index)"@click="addApplied(index)">Apply</button>
+                </div>
             </div>
         </div>
     </div>

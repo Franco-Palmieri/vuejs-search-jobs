@@ -75,6 +75,17 @@ const app = new Vue(
             //nell'array dei preferiti
             addStarred: function (jobIndex){
                 this.starred.push(jobIndex);
+            },
+            //Funzione per candidarsi ritornando un'altra classe
+            //quando sia selezionato e modificare il colore
+            getAppliedClass: function(jobIndex){
+                if(this.applied.includes(jobIndex)){
+                    return "selected"
+                }
+            },
+            //Funzione per candidarsi
+            addApplied: function (jobIndex){
+                this.applied.push(jobIndex);
             }
         },
     }

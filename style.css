@@ -11,6 +11,21 @@
     border: 1px solid black;
     margin: 10px;
 }
+.icons-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icons-container button{
+    padding: 5px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    box-shadow: 0 0 5px lightblue;
+}
 .icons-container .fas{
    color: rgb(235, 235, 31);
+}
+.icons-container .selected{
+    background-color: gray;
 }
