@@ -83,12 +83,8 @@ const app = new Vue(
             addApplied: function (jobid){
                 this.applied.push(jobid);
                 alert("ti sei candidato correttamente")
-                starred = starred.filter((e) =>{
-                    if(e === jobid){
-                        return "false";
-                    }
-                })
-            }
+                this.starred = starred.filter(e !== jobid);
+            },
         },
     }
 );
