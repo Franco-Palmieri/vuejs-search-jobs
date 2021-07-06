@@ -86,6 +86,9 @@ const app = new Vue(
             //Funzione per candidarsi
             addApplied: function (jobIndex){
                 this.applied.push(jobIndex);
+                if (this.starred.includes(jobIndex)){
+                    this.starred.splice(jobIndex, 1)
+                }
             }
         },
     }
