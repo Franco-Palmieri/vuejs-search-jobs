@@ -23,7 +23,7 @@
             <div class="icons-container">
                 <div class="add-favorite" @click="addStarred(job.id)"><i :class="getStarredClass(job.id)"></i></div>
                 <div>
-                    <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)">Apply</button>
+                    <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)">{{button.text}}</button>
                 </div>
             </div>
         </div>

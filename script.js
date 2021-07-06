@@ -54,6 +54,9 @@ const app = new Vue(
                     contract: 'Full Time'
                 }, 
             ],
+            button: {
+                text: "Apply"
+            },
             starred: [1, 2, 3],
             applied: [4, 5],
             jobIndex: 0,
@@ -82,6 +85,7 @@ const app = new Vue(
             //Funzione per candidarsi
             addApplied: function (jobid){
                 this.applied.push(jobid);
+                this.button.text = "Applied"
                 alert("ti sei candidato correttamente")
                 this.starred = this.starred.filter(e => e !== jobid);
             },
