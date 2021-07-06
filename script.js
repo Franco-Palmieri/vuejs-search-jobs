@@ -69,8 +69,12 @@ const app = new Vue(
             },
             //Funzione per aggiungere l'id
             //nell'array dei preferiti
-            addStarred: function (jobid){
-                this.starred.push(jobid);
+            addStarred: function (jobid){                
+                if(this.starred.includes(jobid)){
+                    this.starred = this.starred.filter(e=> e !== jobid);
+                }else{
+                    this.starred.push(jobid);
+                }
             },
             //Funzione per candidarsi ritornando un'altra classe
             //quando sia selezionato e modificare il colore
@@ -81,9 +85,16 @@ const app = new Vue(
             },
             //Funzione per candidarsi
             addApplied: function (jobid){
-                this.applied.push(jobid);
-                alert("ti sei candidato correttamente");
-                this.starred = this.starred.filter(e => e !== jobid);
+                if (this.applied.includes(jobid)){
+                    this.starred = this.starred.filter(e => e !== jobid);
+                    this.applied = this.applied.filter(e => e !== jobid);
+                }else{
+                    this.applied.push(jobid);
+                    alert("ti sei candidato correttamente");
+                    this.starred = this.starred.filter(e => e !== jobid);
+                }
+                
+                
             },
         },
     }
