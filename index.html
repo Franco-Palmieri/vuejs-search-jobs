@@ -12,6 +12,19 @@
 <body>
 
     <div id="app" class="container">
+        <div class="my-apply">
+            <div class="title">
+                <h3>My Apply</h3>
+            </div>
+            <div class="content-apply" v-if="applied.includes(job.id)" 
+            v-for="(job, index) in jobs">
+                <div>{{job.company}}</div>
+                <div>{{job.position}}</div>
+                <div>{{job.logo}}</div>
+                <div>{{job.city}}</div>
+            </div>
+        </div>
+        
         <div class="container-pages">
             <div v-for="job in jobs" class="page-job">
                 <div><h2>{{job.company}}</h2></div>
@@ -32,6 +45,18 @@
                         <button :class="getAppliedClass(job.id)" @click="addApplied(job.id)" v-else>Apply</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="my-starred">
+            <div class="title">
+                <h3>My Favorite</h3>
+            </div>
+            <div class="content-starred" v-if="starred.includes(job.id)" 
+            v-for="(job, index) in jobs">
+                <div>{{job.company}}</div>
+                <div>{{job.position}}</div>
+                <div>{{job.logo}}</div>
+                <div>{{job.city}}</div>
             </div>
         </div>
     </div>
